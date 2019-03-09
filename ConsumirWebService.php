@@ -8,7 +8,7 @@ $num1=2;
 $num2=10;
 
 $parametros=array('num1' =>$num1,
-  'num2'=>$num2,
+  'num2'=>$num2
 );
 //var_dump($parametros);
 
