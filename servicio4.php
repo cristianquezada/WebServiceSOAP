@@ -40,28 +40,34 @@ $json['usuarioBuscado'][]=$registroBuscado;
 
 }else{
 
-$RegistroNoEncontrado['idUser']=0;
+$RegistroNoEncontrado['idUser']="no existe";
 
-$RegistroNoEncontrado['nombre']="nada";
+$RegistroNoEncontrado['nombre']="no existe";
 
-$RegistroNoEncontrado['edad']="nada";
+$RegistroNoEncontrado['edad']="no existe";
 
-$RegistroNoEncontrado['email']="nada";
+$RegistroNoEncontrado['email']="no existe";
 $json['usuarioBuscado'][]=$RegistroNoEncontrado;
 }
 
- json_encode($json);
+ //json_encode($json);
 
 
 ///////////
 }else {
-	$datos="no entra";
-	$json['usuarioBuscado'][]="No entra";
- json_encode($json);
+	$RegistroNoEncontrado['idUser']="No ingresó nada";
+
+$RegistroNoEncontrado['nombre']="No ingresó nada";
+
+$RegistroNoEncontrado['edad']="No ingresó nada";
+
+$RegistroNoEncontrado['email']="No ingresó nada";
+$json['usuarioBuscado'][]=$RegistroNoEncontrado;
+ //json_encode($json);
 }
 /////////7
-
-	return array("json" =>$json);
+return json_encode($json);
+//	return array("json" =>$json);
 
  
 }
