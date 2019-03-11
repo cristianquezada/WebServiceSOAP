@@ -22,7 +22,10 @@ $cliente=new nusoap_client("http://localhost/Quezada/WebServices/servicio5.php",
 $respuesta=$cliente->call("RescatarDatosBDV5");
 
 $jsonRecibido=json_decode($respuesta,true);
-for ($i=0; $i <=count($jsonRecibido) ; $i++) { 
+
+echo "Cantidad Datos: ".count($jsonRecibido['usuarioBuscado']);
+
+for ($i=0; $i <count($jsonRecibido['usuarioBuscado']) ; $i++) { 
 
 $idUser=$jsonRecibido['usuarioBuscado'][$i]['idUser'];
 $nombre=$jsonRecibido['usuarioBuscado'][$i]['nombre'];
